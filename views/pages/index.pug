@@ -1,0 +1,53 @@
+extends ../layout
+
+block variables
+  - activeMenuItem = 'Главная'
+
+block content
+  main.content
+    .container
+      section.popular-section
+        h1.last-news-title.title
+          | Популярные товары
+        .hero
+          .hero__menu
+            ul.hero__menu-list
+              - items = ["Телефоны", "Планшеты", "Ноутбуки"]
+              each item in items
+                li.hero__menu-item(class=`${item === 'Телефоны' ? 'hero__menu-item--active' : ''}`)
+                  a(href="").hero__menu-link #{item}
+
+          .hero__product
+            .hero__img
+              .hero__text
+                .hero__undertitle Популярный
+                .hero__title
+                  | Macbook
+                p.hero__content
+                  | Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                  | nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate.
+      hr
+      p.middle-info
+        | Уникальное предложение! Скидка 20% только до конца #[b этого] месяца! #[br] Успей приобрести ненужное барахло!
+      hr
+      h1.title
+        | Просмотренные продукты
+      ul.products
+        - for (i = 0; i < 3; i++)
+          li.products__item
+            .products__picture
+              .products__display
+                img(src="img/shoes/big.png")
+              .products__thumbs
+                ul.products__thumbs-list
+                  - for (var j = 1; j <= 3; j++)
+                    li.products__thumbs-item
+                      img(src=`img/shoes/small-${j}.png`)
+
+            .product__content
+              .product__title Keeping it natural
+              p.product__date Jan 01, 2011 • 1 Comment
+              .product__text
+                | Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                | nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin.
+                | nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin.

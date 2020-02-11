@@ -1,0 +1,46 @@
+extends ../layout
+
+block variables
+  - activeMenuItem = 'О компании'
+
+block content
+  .container
+    .welcome
+      .welcome-picture
+        img(src="/img/about-pic.jpg" alt="").welcome__picture-img
+        .welcome-picture__text О компании
+      .welcome-text
+        .welcome-text__left
+          .welcome__divider.welcome__divider--targets
+            | Цели
+          .welcome__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero esse deserunt tenetur voluptatibus. Cum nam eligendi sunt ex, doloribus atque ut ipsa alias quidem obcaecati asperiores, doloremque quo iste.Dolores unde provident atque officiis sint corporis quae voluptas fugit molestiae. Doloribus vitae quia laudantium maiores id quos ipsum tempore, officiis, quisquam maxime inventore modi impedit nam praesentium, eaque eum?Quasi quo ad tempore amet fuga, distinctio deleniti earum nostrum dolorem ullam pariatur vero, iusto delectus aspernatur accusantium? Architecto, ex corporis nesciunt neque corrupti odio recusandae obcaecati dicta hic natus?Mollitia tempore hic esse quaerat sit beatae odio laudantium fugiat facilis. Laborum atque esse porro veniam, facere eveniet hic aspernatur ad totam itaque dicta modi aliquid doloremque consequatur. Ipsa, fugit.Quam optio minima facilis et perspiciatis nesciunt eum animi ducimus? Rerum unde voluptas incidunt repellat, rem, amet voluptatum aperiam similique molestias et autem eum cumque hic illo aliquid placeat. Atque!Voluptas, delectus ut? Nam rerum aliquam, consectetur necessitatibus non voluptatum 
+          
+          .welcome__divider.welcome__divider--company
+            | О компании
+          .welcome__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero esse deserunt tenetur voluptatibus. Cum nam eligendi sunt ex, doloribus atque ut ipsa alias quidem obcaecati asperiores, doloremque quo iste.Dolores unde provident atque officiis sint corporis quae voluptas fugit molestiae. Doloribus vitae quia laudantium maiores id quos ipsum tempore, officiis, quisquam maxime inventore modi impedit nam praesentium, eaque eum?Quasi quo ad tempore amet fuga, distinctio deleniti earum nostrum dolorem ullam pariatur vero, iusto delectus aspernatur accusantium? Architecto, ex corporis nesciunt neque corrupti odio recusandae obcaecati dicta hic natus?Mollitia tempore hic esse quaerat sit beatae odio laudantium fugiat facilis. Laborum atque esse porro veniam, facere eveniet hic aspernatur ad totam itaque dicta modi aliquid doloremque consequatur. Ipsa, fugit.Quam optio minima facilis et perspiciatis nesciunt eum animi ducimus? Rerum unde voluptas incidunt repellat, rem, amet voluptatum aperiam similique molestias et autem eum cumque hic illo aliquid placeat. Atque!Voluptas, delectus ut? Nam rerum aliquam, consectetur necessitatibus non voluptatum 
+            
+          .welcome__divider.welcome__divider--concurents
+            | Чем мы лучше конкурентов
+          .welcome__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero esse deserunt tenetur voluptatibus. Cum nam eligendi sunt ex, doloribus atque ut ipsa alias quidem obcaecati asperiores, doloremque quo iste.Dolores unde provident atque officiis sint corporis quae voluptas fugit molestiae. Doloribus vitae quia laudantium maiores id quos ipsum tempore, officiis, quisquam maxime inventore modi impedit nam praesentium, eaque eum?Quasi quo ad tempore amet fuga, distinctio deleniti earum nostrum dolorem ullam pariatur vero, iusto delectus aspernatur accusantium? Architecto, ex corporis nesciunt neque corrupti odio recusandae obcaecati dicta hic natus?Mollitia tempore hic esse quaerat sit beatae odio laudantium fugiat facilis. Laborum atque esse porro veniam, facere eveniet hic aspernatur ad totam itaque dicta modi aliquid doloremque consequatur. Ipsa, fugit.Quam optio minima facilis et perspiciatis nesciunt eum animi ducimus? Rerum unde voluptas incidunt repellat, rem, amet voluptatum aperiam similique molestias et autem eum cumque hic illo aliquid placeat. Atque!Voluptas, delectus ut? Nam rerum aliquam, consectetur necessitatibus non voluptatum 
+                    
+        .welcome-text__right
+          .timeline
+            .timeline__years
+              ul.timeline__years-list
+                - let years = [2017, 2016, 2015, 2014, 2013]
+                each year in years
+                  li.timeline__years-item #{year}
+                      .timeline__middle-line
+            .timeline__content
+              ul.timeline__line
+                - for (var i = 0; i < years.length; i++)
+                  li.timeline__line-item
+                    .timeline__title Газпром
+                    .timeline__desk Поставки печатной продукции
+          .call-on-me
+            .call-on-me__title Вы можете получить консультацию прямо сейчас!
+            .call-on-me__button
+              a(href="#").fa.fa-microphone.call-on-me__icon

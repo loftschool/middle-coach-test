@@ -1,0 +1,41 @@
+.options-table {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.options-table__row {
+  display: flex;
+
+  &:last-child {
+    .options-table__cell {
+      border-bottom: none;
+    }
+  }
+}
+
+.options-table__header {
+  font-weight: bold;
+}
+
+.options-table__cell {
+  border-left: 1px solid #ccc;
+  padding: 20px 0px;
+  border-bottom: 1px solid #ccc;
+
+  &:first-child {
+    width: 300px;
+    border-left: none;
+    padding-left: 10px;
+  }
+
+  &:nth-child(2) {
+    width: 150px;
+    text-align: center;
+  }
+
+  &:nth-child(3) {
+    flex: 1;
+    text-align: center;
+  }
+}
+

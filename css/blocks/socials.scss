@@ -1,0 +1,22 @@
+.socials {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 24px;
+}
+
+.socials__link {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #434a54;
+  color: #fff;
+  text-decoration: none;
+}
+
+.socials__item {
+  margin-right: 20px;
+}

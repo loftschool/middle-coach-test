@@ -1,0 +1,15 @@
+.welcome-text {
+  display: flex;
+}
+
+.welcome-text__left {
+  width: 600px;
+}
+
+.welcome-text__right {
+  width: 340px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+}

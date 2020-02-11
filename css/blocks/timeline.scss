@@ -1,0 +1,40 @@
+.timeline {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.timeline__line-item {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 6px 10px 0 rgba(#212121, .13);
+}
+
+.timeline__years-list {
+  margin-top: 28px;
+  margin-right: 15px;
+}
+
+.timeline__years-item {
+  margin-bottom: 65px;
+  position: relative;
+
+  &:last-child {
+    .timeline__middle-line {
+      display: none;
+    }    
+  }
+}
+
+.timeline__middle-line {
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  width: 1px;
+  height: 52px;
+  background: #ccc;
+  top: 100%;
+  margin-top: 5px;
+}

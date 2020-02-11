@@ -1,0 +1,17 @@
+footer.footer
+  .container
+    .footer__text
+      | По всем вопросам пишите на почту: 
+      br
+      a.footer__mail(href='') site@yandex.ru
+
+    .phone-call
+      .phone-call__title Звоните на прямой номер
+      .fa.fa-phone-square.phone-call__icon
+      a(href="tel:+78007770212").phone-call__text 8 (800) 777-02-12
+
+    ul.socials
+      each icon in ['facebook', 'vk', 'whatsapp', 'telegram']
+        li.socials__item
+          a.socials__link(href="#")
+            i.fa(aria-hidden='true' class=`fa-${icon}`)

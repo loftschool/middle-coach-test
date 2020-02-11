@@ -1,0 +1,16 @@
+.bc__link {
+  list-style: italic;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.bc__item {
+  &--active {
+    .bc__link {
+      color: #ef7846;
+    }
+  }
+}

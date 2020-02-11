@@ -1,0 +1,86 @@
+extends ../layout
+
+block variables
+  - activeMenuItem = 'Продукты'
+
+block content
+  .container
+    include ../common/breadcrumbs.pug
+    .inner-products
+      aside.inner-products__sidebar
+        .inner-products__category
+          .inner-products__sidebar-title Состояние товара
+          ul.inner-products__filters
+            - items = ["новые", "уцененные"]
+            - for (var i = 0; i < items.length; i++)
+              li.inner-product__filters-item
+                input(type="checkbox" id=`id_0${i}`).inner-products__control
+                label(for=`id_0${i}`).inner-products__label= items[i]
+        
+        .inner-products__category
+          .inner-products__sidebar-title Цвет товара
+          ul.inner-products__filters
+            - items = ["Золотой", "Розово-золотой", "Серебристый", "Серый", "Черный", "Черный Оникс"]
+            - for (var i = 0; i < items.length; i++)
+              li.inner-product__filters-item
+                input(type="checkbox" id=`id_1${i}`).inner-products__control
+                label(for=`id_1${i}`).inner-products__label= items[i]
+        
+        .inner-products__category
+          .inner-products__sidebar-title Разрешение основной камеры
+          ul.inner-products__filters
+            - items = ["12 Мп", "8 Мп"]
+            - for (var i = 0; i < items.length; i++)
+              li.inner-product__filters-item
+                input(type="checkbox" id=`id_2${i}`).inner-products__control
+                label(for=`id_2${i}`).inner-products__label= items[i]
+
+        .inner-products__category
+          .inner-products__sidebar-title Объем встроенной памяти
+          ul.inner-products__filters
+            - items = ["256 Гб", "128 Гб", "64 Гб", "28 Гб"]
+            - for (var i = 0; i < items.length; i++)
+              li.inner-product__filters-item
+                input(type="checkbox" id=`id_3${i}`).inner-products__control
+                label(for=`id_3${i}`).inner-products__label= items[i]
+
+      main.inner-products__data
+        h1.inner-products__title Часы для верстальщика
+        .inner-products__info
+          .inner-products__info-items
+            ul.inner-products__list
+              - for (var i = 0; i < 3; i++)
+                li.inner-products__item
+                  img(src=`/img/watches/small-${i + 1}.jpg`, alt="")
+          .inner-products__info-display
+            img(src="/img/watches/big-1.jpg", alt="")
+          .inner-products__info-items
+            ul.inner-products__list
+              - for (var i = 0; i < 3; i++)
+                li.inner-products__item
+                  img(src=`/img/watches/small-${i + 1}.jpg`, alt="")
+        .inner-products__content
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates nesciunt tempora aut mollitia! Laborum veritatis, ea explicabo quidem optio possimus accusamus aut enim modi saepe similique, autem alias maxime minima!
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates nesciunt tempora aut mollitia! Laborum veritatis, ea explicabo quidem optio possimus accusamus aut enim modi saepe similique, autem alias maxime minima!
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates nesciunt tempora aut mollitia! Laborum veritatis, ea explicabo quidem optio possimus accusamus aut enim modi saepe similique, autem alias maxime minima!
+        .inner-products__options
+          h2 Сравнение характеристик
+          .options-table
+            .options-table__row.options-table__header
+              .options-table__cell
+              .options-table__cell Ваши часы
+              .options-table__cell Наши часы
+
+            - 
+              rows = [
+                ['Соблюдение дедлайна', 'Нет', 'Нет'],
+                ['Измеряют вес', 'Нет', 'Да'],
+                ['Готовят ужин', 'Нет', 'Да'],
+                ['Гуляют с собачкой', 'Нет', 'Да']
+              ]
+
+            each row in rows
+              .options-table__row
+                .options-table__cell #{row[0]}
+                .options-table__cell #{row[1]}
+                .options-table__cell #{row[2]}

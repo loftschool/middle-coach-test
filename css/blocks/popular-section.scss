@@ -1,0 +1,17 @@
+.popular-section {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #232526;
+    background: -webkit-linear-gradient(left, #232526 0%,#414345 100%);
+    background: linear-gradient(to right, #232526 0%,#414345 100%);
+  }
+}

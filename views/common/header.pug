@@ -1,0 +1,31 @@
+header.header
+  .header-container
+    a.logo(href='/')
+      img(src="/img/logo.png", alt="")
+    nav.menu
+      ul.menu__list
+        -
+          menu = [
+            ['Главная', '/'],
+            ['О компании', '/about.html'],
+            ['Продукты', '/product.html']
+          ]
+        each item in menu
+          li.menu__item(class=`${item[0] === activeMenuItem ? 'menu__item--active' : ''}`)
+            a.menu__link(href=`${item[1]}`) #{item[0]}
+    .contacts
+      .contacts__drop-title Контакты
+      .contacts__dropdown
+        ul.contacts__list
+
+          - 
+            contacts = [
+              ['Адрес:', 'Обуховской обороны 86'],
+              ['Телефон:', '+7 (921) 991-23-17'],
+              ['Режим работы:', '11:00 - 20:00'],
+            ]
+
+          each item in contacts
+            li.contacts__item
+              .contacts__title #{item[0]}
+              .contacts__content #{item[1]}

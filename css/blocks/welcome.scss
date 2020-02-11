@@ -1,0 +1,40 @@
+.welcome__divider {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 4px;
+    background: #000;
+  }
+
+  &--targets {
+    &:before, &:after {
+      width: 265px;
+    }
+  }
+
+  &--company {
+    &:before, &:after {
+      width: 230px;
+    }
+  }
+  
+  &--concurents {
+    &:before, &:after {
+      width: 175px;
+    }
+  }
+}
+
+.welcome__text {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}

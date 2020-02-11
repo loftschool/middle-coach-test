@@ -1,0 +1,45 @@
+.call-on-me {
+  position: relative;
+  background: #febe70; /* Old browsers */
+  background: linear-gradient(45deg, #febe70 0%,#fb8e70 100%);
+  border-radius: 10px;
+  box-shadow: 0 6px 10px 0 rgba(#212121, .13);
+}
+
+.call-on-me__title {
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+
+.call-on-me__button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0px 10px 0 rgba(#ff8a00, .55);
+  color: #fb8f70;
+  display: block;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-on-me__icon {
+  padding: 5px;
+  color: inherit;
+  font-size: 20px;
+}
