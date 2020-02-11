@@ -6,9 +6,9 @@ header.header
       ul.menu__list
         -
           menu = [
-            ['Главная', '/'],
-            ['О компании', '/about.html'],
-            ['Продукты', '/product.html']
+            ['Главная', './index.html'],
+            ['О компании', './about.html'],
+            ['Продукты', './product.html']
           ]
         each item in menu
           li.menu__item(class=`${item[0] === activeMenuItem ? 'menu__item--active' : ''}`)
